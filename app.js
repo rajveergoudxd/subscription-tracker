@@ -22,10 +22,10 @@ app.get('/', (req, res) => {
     res.send("Welcome to the subscription tracker api.");
 });
 
-await connectToDatabase();
 
 app.listen(5500, async () => {
     console.log(`Subscription Tracker API is running on http://localhost:${PORT}/`);
+    await connectToDatabase();
 });
 
 export default app;
